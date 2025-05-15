@@ -68,7 +68,8 @@ M.setup = function()
   })
 
   polish()
-  vim.cmd.colorscheme 'rose-pine-dawn'
+  vim.cmd.colorscheme 'jellybeans'
+  vim.o.background = 'light'
 end
 
 return M
