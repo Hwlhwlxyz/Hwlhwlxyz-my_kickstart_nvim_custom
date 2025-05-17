@@ -15,6 +15,7 @@ local paste_check = function()
   return clipboard
 end
 
+--https://github.com/GiorgosXou/init.lua
 local polish = function() -- This function is run last -- good place to configure mappings and vim options
   local map = vim.keymap
   local bufopts = { silent = true }
@@ -32,21 +33,7 @@ local polish = function() -- This function is run last -- good place to configur
   vim.keymap.set('n', '<leader>e', vim.diagnostic.open_float, { desc = 'Show diagnostic [E]rror messages' })
 end
 
-M.setup = function()
-  --缩进
-  -- The line beneath this is called `modeline`. See `:help modeline`
-  -- vim: ts=2 sts=2 sw=2 et
-  vim.opt.smarttab = true
-  vim.opt.expandtab = true
-  vim.opt.tabstop = 2
-  vim.opt.shiftwidth = 2
-  vim.opt.softtabstop = 2
-  vim.wo.wrap = false
-  --设置注释
-  vim.keymap.set({ 'n' }, '<C-_>', 'gcc', { remap = true })
-  vim.keymap.set({ 'v' }, '<C-_>', 'gc', { remap = true })
-  vim.keymap.set({ 'i' }, '<C-_>', '<ESC>gcc', { remap = true })
-
+local auto_hide_cmdline = function()
   --cmdline自动隐藏
   vim.api.nvim_create_autocmd('CmdlineEnter', {
     group = vim.api.nvim_create_augroup('gmr_cmdheight_1_on_cmdlineenter', { clear = true }),
@@ -66,9 +53,27 @@ M.setup = function()
     pattern = { '*' },
     command = 'redrawstatus',
   })
+end
+
+M.setup = function()
+  --缩进
+  -- The line beneath this is called `modeline`. See `:help modeline`
+  -- vim: ts=2 sts=2 sw=2 et
+  vim.opt.smarttab = true
+  vim.opt.expandtab = true
+  vim.opt.tabstop = 2
+  vim.opt.shiftwidth = 2
+  vim.opt.softtabstop = 2
+  vim.wo.wrap = false
+  --设置注释
+  vim.keymap.set({ 'n' }, '<C-_>', 'gcc', { remap = true })
+  vim.keymap.set({ 'v' }, '<C-_>', 'gc', { remap = true })
+  vim.keymap.set({ 'i' }, '<C-_>', '<ESC>gcc', { remap = true })
 
   polish()
-  vim.cmd.colorscheme 'jellybeans'
+  auto_hide_cmdline()
+
+  vim.cmd.colorscheme 'penumbra-highcontrast'
   vim.o.background = 'light'
 end
 
