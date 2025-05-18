@@ -158,3 +158,7 @@ hi Visual term=reverse cterm=reverse guibg=#ffd9aa
 " neotree
 hi NeoTreeCursorLine guibg=#ffffff
 hi NeoTreeFileNameOpened guibg=#c4d9b1
+
+" eyeliner.nvim
+"highlight EyelinerPrimary guifg=#ff0000 gui=underline,bold
+"highlight EyelinerSecondary guifg=#f48100 gui=underline
