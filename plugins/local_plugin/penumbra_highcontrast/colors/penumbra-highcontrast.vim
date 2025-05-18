@@ -18,7 +18,7 @@ let s:fg="#2c3035"
 let s:fg2="#3d4145"
 let s:fg3="#4e5155"
 let s:fg4="#5f6265"
-let s:bg2="#FFF7ED"
+let s:bg2="#eee8d5"
 let s:bg3="#d6cfc7"
 let s:bg4="#c2bcb4"
 let s:keyword="#aa3731"
@@ -71,7 +71,7 @@ exe 'hi Function guifg='s:func
 exe 'hi Identifier guifg='s:type'  gui=italic'
 exe 'hi Keyword guifg='s:keyword'  gui=bold'
 exe 'hi Label guifg='s:var
-exe 'hi NonText guifg='s:bg4' guibg='s:bg2
+"exe 'hi NonText guifg='s:bg4' guibg='s:bg2 " 没有字符的地方不需要改变颜色 
 exe 'hi Number guifg='s:const
 exe 'hi Operator guifg='s:keyword
 exe 'hi PreProc guifg='s:keyword
@@ -154,3 +154,7 @@ exe 'hi mkdCode guifg='s:builtin
 " more settings
 hi Visual term=reverse cterm=reverse guibg=#ffd9aa
 
+
+" neotree
+hi NeoTreeCursorLine guibg=#ffffff
+hi NeoTreeFileNameOpened guibg=#c4d9b1

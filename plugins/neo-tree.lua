@@ -45,5 +45,10 @@ return {
         },
       },
     },
+    default_component_configs  = {
+		name = {
+			highlight_opened_files = true -- 高亮已经打开的文件
+		}
+    }
   },
 }
