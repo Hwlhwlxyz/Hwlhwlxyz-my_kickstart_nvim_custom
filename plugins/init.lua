@@ -9,6 +9,7 @@ return {
     'lukas-reineke/indent-blankline.nvim',
     main = 'ibl',
     opts = function(_, opts)
+		opts.exclude = { filetypes = {"nofile", "dashboard"} }
       -- Other blankline configuration here
       return require('indent-rainbowline').make_opts(opts)
     end,
@@ -31,9 +32,7 @@ return {
           vim.api.nvim_set_hl(0, 'EyelinerSecondary', { fg = '#FF8C00', bold = true, underline = true })
         end,
       })
-      require('eyeliner').setup {
-        highlight_on_key = true,
-      }
+      require('eyeliner').setup { highlight_on_key = true,}
     end,
   },
 }
