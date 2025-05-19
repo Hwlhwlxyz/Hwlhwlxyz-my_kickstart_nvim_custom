@@ -1,0 +1,11 @@
+{
+	"for": {
+		"prefix": "fo",
+		"body": [
+			"for (let i = 0; i < ${array}.length; i++) {",
+			"\tconst element=${array}[i];",
+			"\t$0",
+			"}"
+		]
+	}
+}

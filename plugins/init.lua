@@ -35,4 +35,11 @@ return {
       require('eyeliner').setup { highlight_on_key = true,}
     end,
   },
+  --  visual模式显示空白符号
+  {
+    'mcauley-penney/visual-whitespace.nvim',
+    config = true,
+    event = "ModeChanged *:[vV\22]",
+    opts = {},
+  }
 }

@@ -3,7 +3,7 @@ return {
     'rose-pine/neovim',
     name = 'rose-pine',
   },
-  { 'aonemd/quietlight.vim' },
+  { 'aonemd/quietlight.vim' , optional=true},
   { 'tobi-wan-kenobi/zengarden' },
   { 'iibe/gruvbox-high-contrast' },
   { 'catppuccin/nvim', name = 'catppuccin' },
