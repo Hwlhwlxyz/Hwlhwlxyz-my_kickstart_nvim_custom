@@ -3,6 +3,41 @@
 
 local M = {}
 
+-- used in 'saghen/blink.cmp' opts.keymap.['<Tab>']
+M.tab_config =  {
+  function(cmp)
+    if cmp.snippet_active() then return cmp.accept()
+    else return cmp.select_and_accept() end
+  end,
+  'snippet_forward',
+   -- tab跳出括号
+   function()
+	  local col = vim.fn.col('.')
+	  local line = vim.fn.getline('.')
+	  local char = line:sub(col, col)
+	  if char:match('[%)%]%}%"\']') then
+		vim.api.nvim_feedkeys(vim.api.nvim_replace_termcodes("<Right>", true, true, true), 'n', true)
+		return true
+	  end
+	end,
+  'fallback'
+}
+-- used in 'saghen/blink.cmp' opts.fuzzy
+M.fuzzy_config = { 
+  sorts = {
+    'exact',
+    -- defaults
+    'score',
+    'sort_text',
+  }
+}
+
+-- used in 'L3MON4D3/LuaSnip'  config
+M.luasnip_load = function()
+		require("luasnip.loaders.from_vscode").load({ paths = "./lua/custom/my-snippet/vscode-snippet"})
+		require("luasnip.loaders.from_lua").load({paths = "./lua/custom/my-snippet/lua-snippet"})
+end
+
 local paste_check = function()
   local clipboard = vim.fn.getreg '+'
   if string.find(clipboard, '\n') then -- that find, meh..
