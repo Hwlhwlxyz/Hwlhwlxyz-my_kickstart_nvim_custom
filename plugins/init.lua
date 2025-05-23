@@ -20,10 +20,11 @@ return {
   -- 显示跳转文件
   { 'lewis6991/whatthejump.nvim' },
   --  打开当前文件所在目录
-  { 'justinmk/vim-gtfo' },
+  { 'justinmk/vim-gtfo', event = "VeryLazy" },
   -- 高亮 f and F
   {
     'jinh0/eyeliner.nvim',
+    event = "VeryLazy",
     config = function()
       vim.api.nvim_create_autocmd('ColorScheme', {
         pattern = '*',

@@ -18,7 +18,6 @@ return {
     projects.key_format = "  %s"
 
     table.insert(opts.config.center, 3, projects)
-    
-    
+
   end,
 }

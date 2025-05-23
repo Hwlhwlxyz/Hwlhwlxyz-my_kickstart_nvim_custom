@@ -162,3 +162,28 @@ hi NeoTreeFileNameOpened guibg=#c4d9b1
 " eyeliner.nvim
 "highlight EyelinerPrimary guifg=#ff0000 gui=underline,bold
 "highlight EyelinerSecondary guifg=#f48100 gui=underline
+
+
+" https://github.com/petertriho/nvim-scrollbar
+" Scrollbar highlight groups
+hi ScrollbarHandle         guifg=NONE      guibg=#c2bcb4
+hi ScrollbarCursorHandle   guifg=NONE      guibg=#8c4475
+hi ScrollbarCursor         guifg=NONE      guibg=#8c4475
+hi ScrollbarSearchHandle   guifg=NONE      guibg=#f48100
+hi ScrollbarSearch         guifg=NONE      guibg=#fff7ed
+hi ScrollbarErrorHandle    guifg=NONE      guibg=#ff0000
+hi ScrollbarError          guifg=NONE      guibg=#ff0000
+hi ScrollbarWarnHandle     guifg=NONE      guibg=#f48100
+hi ScrollbarWarn           guifg=NONE      guibg=#f48100
+hi ScrollbarInfoHandle     guifg=NONE      guibg=#2a55a8
+hi ScrollbarInfo           guifg=NONE      guibg=#2a55a8
+hi ScrollbarHintHandle     guifg=NONE      guibg=#007d88
+hi ScrollbarHint           guifg=NONE      guibg=#007d88
+hi ScrollbarMiscHandle     guifg=NONE      guibg=#3375b7
+hi ScrollbarMisc           guifg=NONE      guibg=#3375b7
+hi ScrollbarGitAdd         guifg=NONE      guibg=#3a8b65
+hi ScrollbarGitAddHandle   guifg=NONE      guibg=#3a8b65
+hi ScrollbarGitChange      guifg=NONE      guibg=#2a55a8
+hi ScrollbarGitChangeHandle guifg=NONE     guibg=#2a55a8
+hi ScrollbarGitDelete      guifg=NONE      guibg=#aa3731
+hi ScrollbarGitDeleteHandle guifg=NONE     guibg=#aa3731

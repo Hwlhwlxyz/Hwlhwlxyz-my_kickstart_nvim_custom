@@ -3,7 +3,7 @@ return {
   opts = {
     manual_mode = true,
   },
-  event = "VeryLazy",
+--  event = "VeryLazy",
   config = function(_, opts)
     require("project_nvim").setup(opts)
     local history = require("project_nvim.utils.history")
