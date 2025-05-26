@@ -7,7 +7,27 @@ return {
   },
   opts = {},
   config = function()
-    require('scrollbar').setup({set_highlights = false})
+    require('scrollbar').setup({
+		set_highlights = false,
+        excluded_buftypes = {
+        "terminal",
+        "nofile",
+        "popup",
+        "noice",
+		},
+		excluded_filetypes = {
+		"dashboard",
+		"dashboardPrompt",
+		"prompt",
+        "TelescopePrompt",
+        "noice",
+			"popup",
+			"noice",
+			"blink-cmp-menu",
+			"blink-cmp-signature",
+			"blink-cmp-documentation",
+		},
+    })
     require('gitsigns').setup()
     require('hlslens').setup {
       build_position_cb = function(plist, _, _, _)
@@ -16,5 +36,6 @@ return {
     }
     require('scrollbar.handlers.gitsigns').setup()
     require('scrollbar.handlers.search').setup()
+    
   end,
 }

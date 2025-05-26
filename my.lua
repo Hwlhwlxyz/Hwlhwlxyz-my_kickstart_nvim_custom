@@ -104,6 +104,10 @@ M.setup = function()
   vim.keymap.set({ 'n' }, '<C-_>', 'gcc', { remap = true })
   vim.keymap.set({ 'v' }, '<C-_>', 'gc', { remap = true })
   vim.keymap.set({ 'i' }, '<C-_>', '<ESC>gcc', { remap = true })
+  
+	--  telescope 搜索命令
+	vim.api.nvim_set_keymap('n', '<F1>', ':Telescope commands<CR>', { noremap = true, silent = true })
+	vim.api.nvim_set_keymap('n', '<C-p>', ':Telescope find_files<CR>', { desc = 'Telescope find files' })
 
   polish()
   auto_hide_cmdline()
