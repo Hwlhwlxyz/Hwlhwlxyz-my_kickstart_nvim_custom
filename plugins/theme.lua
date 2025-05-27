@@ -27,4 +27,5 @@ return {
     dir = vim.fn.stdpath 'config' .. '/lua/custom/plugins/local_plugin/penumbra_highcontrast',
     name = 'penumbra-highcontrast',
   },
+  { "EdenEast/nightfox.nvim" }
 }

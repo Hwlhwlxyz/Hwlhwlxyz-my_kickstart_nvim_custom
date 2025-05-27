@@ -53,6 +53,7 @@ return {
       require('grug-far').setup({
         -- options, see Configuration section below
         -- there are no required options atm
+          highlight_on_search = true
       });
     end
   },

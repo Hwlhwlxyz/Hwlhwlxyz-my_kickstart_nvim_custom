@@ -63,7 +63,7 @@ exe 'hi Define guifg='s:keyword
 exe 'hi DiffAdd guifg=#000000 guibg=#bef6dc gui=bold'
 exe 'hi DiffDelete guifg='s:bg2
 exe 'hi DiffChange  guibg=#5b76ef guifg=#ffffff'
-exe 'hi DiffText guifg=#ffffff guibg=#ff0000 gui=bold'
+hi DiffText guifg=#ffffff guibg=#ff0000 gui=bold
 exe 'hi ErrorMsg guifg='s:warning' guibg='s:bg2' gui=bold'
 exe 'hi WarningMsg guifg='s:fg' guibg='s:warning2
 exe 'hi Float guifg='s:const
