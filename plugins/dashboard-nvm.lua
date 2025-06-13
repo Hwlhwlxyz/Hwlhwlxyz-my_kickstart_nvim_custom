@@ -1,23 +1,12 @@
 return {
-  "nvimdev/dashboard-nvim",
-  optional = false,
-  opts = function(_, opts)
-    
-    if not vim.tbl_get(opts, "config", "center") then
-      return
-    end
-
-    local projects = {
-      action = pick,
-      desc = " Projects",
-      icon = " ",
-      key = "p",
+  'nvimdev/dashboard-nvim',
+  event = 'VimEnter',
+  config = function()
+    require('dashboard').setup {
+      -- config
+      theme = 'hyper',
+      shortcuts_left_side = true,
     }
-
-    projects.desc = projects.desc .. string.rep(" ", 43 - #projects.desc)
-    projects.key_format = "  %s"
-
-    table.insert(opts.config.center, 3, projects)
-
   end,
+  dependencies = { {'nvim-tree/nvim-web-devicons'}}
 }
